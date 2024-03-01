@@ -17,7 +17,7 @@
  *  The "‚‗‚" character is not a comma, it is the SINGLE LOW-9 QUOTATION MARK unicode 201A
  *  and unicode 2017 that are used for separating the items in a list.
  */
-package com.example.android.clothbazaar.helper
+package com.siddiq.android.clothbazaar.helper
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -29,7 +29,7 @@ import android.os.Environment
 import android.preference.PreferenceManager
 import android.text.TextUtils
 import android.util.Log
-import com.example.android.clothbazaar.models.PopularData
+import com.siddiq.android.clothbazaar.models.PopularData
 import com.google.gson.Gson
 import java.io.File
 import java.io.FileOutputStream

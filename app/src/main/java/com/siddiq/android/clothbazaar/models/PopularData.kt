@@ -1,4 +1,4 @@
-package com.example.android.clothbazaar.models
+package com.siddiq.android.clothbazaar.models
 
 
 

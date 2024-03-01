@@ -1,4 +1,4 @@
-package com.example.android.clothbazaar.activities
+package com.siddiq.android.clothbazaar.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,12 +6,12 @@ import android.view.View
 import android.view.Window
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android.clothbazaar.R
-import com.example.android.clothbazaar.adapters.CartAdapter
-import com.example.android.clothbazaar.databinding.ActivityCartBinding
-import com.example.android.clothbazaar.helper.ChangeNumberItemsListener
-import com.example.android.clothbazaar.helper.ManagementCart
-import kotlin.properties.Delegates
+import com.siddiq.android.clothbazaar.R
+import com.siddiq.android.clothbazaar.adapters.CartAdapter
+import com.siddiq.android.clothbazaar.databinding.ActivityCartBinding
+import com.siddiq.android.clothbazaar.helper.ChangeNumberItemsListener
+import com.siddiq.android.clothbazaar.helper.ManagementCart
+
 
 class CartActivity : AppCompatActivity() {
     lateinit var managementCart: ManagementCart
@@ -32,7 +32,6 @@ class CartActivity : AppCompatActivity() {
         val window: Window =this@CartActivity.getWindow()
         window.statusBarColor= ContextCompat.getColor(this@CartActivity,R.color.purple_dark)
     }
-
 
     private fun initlist() {
         if(managementCart.getListCart().isEmpty()){

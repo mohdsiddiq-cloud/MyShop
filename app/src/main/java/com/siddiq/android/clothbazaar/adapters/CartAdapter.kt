@@ -1,4 +1,4 @@
-package com.example.android.clothbazaar.adapters
+package com.siddiq.android.clothbazaar.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,11 +7,10 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners
-import com.example.android.clothbazaar.databinding.CartlistItemBinding
-import com.example.android.clothbazaar.helper.ChangeNumberItemsListener
-import com.example.android.clothbazaar.helper.ManagementCart
-import com.example.android.clothbazaar.models.PopularData
-import kotlinx.coroutines.withContext
+import com.siddiq.android.clothbazaar.databinding.CartlistItemBinding
+import com.siddiq.android.clothbazaar.helper.ChangeNumberItemsListener
+import com.siddiq.android.clothbazaar.helper.ManagementCart
+import com.siddiq.android.clothbazaar.models.PopularData
 
 
 class CartAdapter(val items: List<PopularData>,val changeNumberItemsListener: ChangeNumberItemsListener) : Adapter<CartAdapter.MyViewHolder>() {

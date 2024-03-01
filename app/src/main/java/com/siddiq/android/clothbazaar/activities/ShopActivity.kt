@@ -1,4 +1,4 @@
-package com.example.android.clothbazaar.activities
+package com.siddiq.android.clothbazaar.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.Window
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android.clothbazaar.R
-import com.example.android.clothbazaar.adapters.PopularDataAdapter
-import com.example.android.clothbazaar.databinding.ActivityShopBinding
-import com.example.android.clothbazaar.models.PopularData
+import com.siddiq.android.clothbazaar.R
+import com.siddiq.android.clothbazaar.adapters.PopularDataAdapter
+import com.siddiq.android.clothbazaar.databinding.ActivityShopBinding
+import com.siddiq.android.clothbazaar.models.PopularData
 
 class ShopActivity : AppCompatActivity() {
     lateinit var binding: ActivityShopBinding

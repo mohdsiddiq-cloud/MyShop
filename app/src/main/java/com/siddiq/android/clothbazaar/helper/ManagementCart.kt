@@ -1,8 +1,8 @@
-package com.example.android.clothbazaar.helper
+package com.siddiq.android.clothbazaar.helper
 
 import android.content.Context
 import android.widget.Toast
-import com.example.android.clothbazaar.models.PopularData
+import com.siddiq.android.clothbazaar.models.PopularData
 
 class ManagementCart(private val context: Context) {
     private val tinyDB: TinyDB = TinyDB(context)

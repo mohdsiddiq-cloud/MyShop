@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "336517674798",
+    "project_id": "clothbazaar-f4b1c",
+    "storage_bucket": "clothbazaar-f4b1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336517674798:android:ac26786599ba17ec9c2cbf",
+        "android_client_info": {
+          "package_name": "com.siddiq.android.clothbazaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoThZpMVhP0t9w-RvnmYKaD4SlhLOh7i8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

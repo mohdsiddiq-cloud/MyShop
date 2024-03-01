@@ -1,4 +1,4 @@
-package com.example.android.clothbazaar
+package com.siddiq.android.clothbazaar
 
 import org.junit.Test
 

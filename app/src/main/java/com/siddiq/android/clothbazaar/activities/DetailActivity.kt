@@ -1,14 +1,14 @@
-package com.example.android.clothbazaar.activities
+package com.siddiq.android.clothbazaar.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
-import com.example.android.clothbazaar.R
-import com.example.android.clothbazaar.databinding.ActivityDetailBinding
-import com.example.android.clothbazaar.helper.ManagementCart
-import com.example.android.clothbazaar.models.PopularData
+import com.siddiq.android.clothbazaar.R
+import com.siddiq.android.clothbazaar.databinding.ActivityDetailBinding
+import com.siddiq.android.clothbazaar.helper.ManagementCart
+import com.siddiq.android.clothbazaar.models.PopularData
 
 class DetailActivity : AppCompatActivity() {
     lateinit var binding: ActivityDetailBinding
