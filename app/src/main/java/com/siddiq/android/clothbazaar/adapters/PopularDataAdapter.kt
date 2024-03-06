@@ -25,12 +25,12 @@ class PopularDataAdapter(val items: List<PopularData>) : Adapter<PopularDataAdap
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         binding.titleText.text=items.get(position).title
-        binding.scoreText.text=items.get(position).score.toString()
-        binding.priceText.text="$"+items.get(position).price
+//        binding.scoreText.text=items.get(position).score.toString()
+        binding.priceText.text="₹"+items.get(position).price
         val context=holder.itemView.context
 
         val drawableResourced=holder.itemView.resources
-            .getIdentifier(items.get(position).picUrl,"drawable",holder.itemView.context.packageName)
+            .getIdentifier(items.get(position).picUrl,"mipmap",holder.itemView.context.packageName)
 
         Glide.with(context).load(drawableResourced).transform(GranularRoundedCorners(30F,30F,0F,0F)).into(binding.pic)
 

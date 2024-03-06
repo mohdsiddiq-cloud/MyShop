@@ -58,10 +58,10 @@ binding.CartView.adapter=CartAdapter(managementCart.getListCart(), object : Chan
         tax= (Math.round(managementCart.getTotalFee()*percentTax*100)/100).toDouble()
         val total = Math.round((managementCart.getTotalFee() + tax + delivery) * 100)/100
         val itemTotal = Math.round(managementCart.getTotalFee() * 100)/100
-        binding.totalFeeTxt.text="$"+itemTotal
-        binding.taxTxt.text="$"+tax
-        binding.deliveryTxt.text="$"+delivery
-        binding.totalTxt.text="$"+total
+        binding.totalFeeTxt.text="₹"+itemTotal
+        binding.taxTxt.text="₹"+tax
+        binding.deliveryTxt.text="₹"+delivery
+        binding.totalTxt.text="₹"+total
     }
 
     private fun setVariable() {

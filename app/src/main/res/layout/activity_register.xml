@@ -111,22 +111,31 @@
                 android:src="@drawable/forward_arrow"
                 android:background="@drawable/background_btn_forward_arrow" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button4"
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/button4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="55dp"-->
+<!--                style="android:style/widget.Button"-->
+<!--                android:textColor="@color/main_color"-->
+<!--                android:layout_marginEnd="32dp"-->
+<!--                android:layout_marginStart="32dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:drawableStart="@drawable/google"-->
+<!--                android:drawablePadding="16dp"-->
+<!--                android:padding="16dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="Sign Up with Google"-->
+<!--                android:background="@drawable/background_signupbutton"/>-->
+            <TextView
+                android:id="@+id/loginPageText"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                style="android:style/widget.Button"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Already have an account? Login here"
+                android:textAlignment="center"
                 android:textColor="@color/main_color"
-                android:layout_marginEnd="32dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:drawableStart="@drawable/google"
-                android:drawablePadding="16dp"
-                android:padding="16dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:text="Sign Up with Google"
-                android:background="@drawable/background_signupbutton"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

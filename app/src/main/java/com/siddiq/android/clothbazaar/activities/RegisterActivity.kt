@@ -2,14 +2,18 @@ package com.siddiq.android.clothbazaar.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.siddiq.android.clothbazaar.databinding.ActivityRegisterBinding
+import com.siddiq.android.clothbazaar.helper.SessionManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -18,14 +22,20 @@ import kotlinx.coroutines.launch
 class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var db:FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         FirebaseApp.initializeApp(this)
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         auth = Firebase.auth
+        db=Firebase.firestore
+        binding.loginPageText.setOnClickListener {
+            val intent= Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun signUp(view: View) {
@@ -46,6 +56,14 @@ class RegisterActivity : AppCompatActivity() {
         else if(email.isEmpty()){
             Toast.makeText(this, "Email Required", Toast.LENGTH_SHORT).show()
             binding.editTextEmail.error="Email Required"
+            CoroutineScope(Dispatchers.Main).launch {
+                delay(3000)
+                binding.editTextEmail.error = null
+            }
+        }
+        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            Toast.makeText(this, "Enter Valid Email", Toast.LENGTH_SHORT).show()
+            binding.editTextEmail.error="Enter valid Email"
             CoroutineScope(Dispatchers.Main).launch {
                 delay(3000)
                 binding.editTextEmail.error = null
@@ -83,9 +101,17 @@ class RegisterActivity : AppCompatActivity() {
         else{
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
+                    val user = auth.currentUser
                     Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT).show()
+                    val data= hashMapOf("name" to binding.editTextName.text.toString(),
+                    "uid" to user?.uid)
+                    if (user != null) {
+                        db.collection("Users").document(user.uid).set(data)
+                    }
+                    SessionManager.setLogin(this, true)
                     val intent = Intent(this, ShopActivity::class.java)
                     startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this, it.exception?.message.toString(), Toast.LENGTH_SHORT).show()
                 }

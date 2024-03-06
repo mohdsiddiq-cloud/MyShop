@@ -15,6 +15,7 @@ import com.google.firebase.ktx.Firebase
 import com.siddiq.android.clothbazaar.R
 import com.siddiq.android.clothbazaar.databinding.ActivityLoginBinding
 import com.siddiq.android.clothbazaar.databinding.ActivityRegisterBinding
+import com.siddiq.android.clothbazaar.helper.SessionManager
 import kotlinx.coroutines.*
 
 class LoginActivity : AppCompatActivity() {
@@ -24,7 +25,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         auth=Firebase.auth
+        binding.registerPageText.setOnClickListener {
+            val intent=Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun signIn(view: View) {
@@ -51,8 +58,10 @@ class LoginActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
                 if(it.isSuccessful){
                     Toast.makeText(this, "Access granted!", Toast.LENGTH_SHORT).show()
+                    SessionManager.setLogin(this, true)
                     val intent = Intent(this, ShopActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
                 else{
                     Toast.makeText(this, it.exception?.message.toString(), Toast.LENGTH_SHORT).show()

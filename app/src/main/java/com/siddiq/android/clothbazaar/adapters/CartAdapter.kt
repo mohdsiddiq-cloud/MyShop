@@ -28,14 +28,13 @@ class CartAdapter(val items: List<PopularData>,val changeNumberItemsListener: Ch
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         binding.titleTxt.text=items.get(position).title
-        binding.feeEachItem.text="$"+items.get(position).price.toString()
-        binding.totalEachItem.text="$"+ Math.round(items.get(position).numberInCart*items.get(position).price)
+        binding.feeEachItem.text="₹"+items.get(position).price.toString()
+        binding.totalEachItem.text="₹"+ Math.round(items.get(position).numberInCart*items.get(position).price)
         binding.numberCartItem.text=items.get(position).numberInCart.toString()
-
         val context=holder.itemView.context
 
         val drawableResourced=holder.itemView.resources
-            .getIdentifier(items.get(position).picUrl,"drawable",holder.itemView.context.packageName)
+            .getIdentifier(items.get(position).picUrl,"mipmap",holder.itemView.context.packageName)
 
         Glide.with(context).load(drawableResourced).transform(GranularRoundedCorners(30F,30F,0F,0F)).into(binding.pic)
 

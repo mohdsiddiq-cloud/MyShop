@@ -12,7 +12,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +43,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/profileName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mohd Siddiq"
@@ -52,7 +53,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/notification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -65,10 +66,10 @@
                         android:id="@+id/imageView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                        app:layout_constraintStart_toEndOf="@+id/imageView3"
-                        app:layout_constraintTop_toTopOf="@+id/imageView3"
+                        app:layout_constraintBottom_toTopOf="@+id/notification"
+                        app:layout_constraintEnd_toEndOf="@+id/notification"
+                        app:layout_constraintStart_toEndOf="@+id/notification"
+                        app:layout_constraintTop_toTopOf="@+id/notification"
                         android:src="@drawable/red_circle" />
 
                     <TextView
@@ -106,6 +107,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:background="@drawable/background_banner"
                 android:layout_height="160dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
@@ -121,7 +123,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/top_banner" />
+                    android:src="@drawable/banner" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -136,18 +138,18 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button3"
-                    android:layout_width="80dp"
-                    android:layout_height="48dp"
-                    android:layout_marginEnd="16dp"
-                    style="@android:style/Widget.Button"
-                    android:text="Buy now"
-                    android:textColor="@color/white"
-                    android:background="@drawable/background_buybutton"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView9"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView6"
-                    app:layout_constraintTop_toTopOf="@+id/textView9" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/button3"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    style="@android:style/Widget.Button"-->
+<!--                    android:text="Buy now"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:background="@drawable/background_buybutton"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/textView9"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/textView9" />-->
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -175,17 +177,140 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView7"
+                        android:id="@+id/shirtImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/cat1" />
+                        android:src="@mipmap/shirt" />
+
+                    <TextView
+                        android:id="@+id/shirtText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Shirts"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/tshirtImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/tshirt" />
+
+                    <TextView
+                        android:id="@+id/tshirtText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="T-shirts"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/jeansImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/jeans" />
+
+                    <TextView
+                        android:id="@+id/jeansText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Jeans"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/skirtImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/skirt" />
+
+                    <TextView
+                        android:id="@+id/skirtText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Skirts"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/frockImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/frauk" />
+
+                    <TextView
+                        android:id="@+id/froukText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Frocks"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/kurtisImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/kurti" />
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Digitals"
+                        android:text="Kurtis"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
 
@@ -198,17 +323,17 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView8"
+                        android:id="@+id/shoesImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/cat2" />
+                        android:src="@mipmap/shoes" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Clothes"
+                        android:text="Shoes"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
 
@@ -221,17 +346,17 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/jacketsImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/cat3" />
+                        android:src="@mipmap/jackets" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Tools"
+                        android:text="Jackets"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
 
@@ -244,17 +369,17 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView10"
+                        android:id="@+id/sweaterImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/cat4" />
+                        android:src="@mipmap/sweaters" />
 
                     <TextView
                         android:id="@+id/textView14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Beauty"
+                        android:text="Sweaters"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
 
@@ -267,18 +392,18 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageVie11"
+                        android:id="@+id/kidsImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/cat5" />
+                        android:src="@mipmap/kids" />
 
                     <TextView
                         android:id="@+id/textView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="View all"
+                        android:text="Kids"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
 
@@ -304,7 +429,7 @@
                     android:text="Popular Products" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/seeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See all"
@@ -323,7 +448,7 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -346,13 +471,14 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/home"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.25"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView11"
+                        android:id="@+id/homeImage"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
@@ -368,13 +494,14 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/wishlist"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.25"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView12"
+                        android:id="@+id/wishlistImage"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
@@ -389,34 +516,34 @@
                         android:textAlignment="center" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2"
-                    android:orientation="vertical"
-                    android:visibility="invisible">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:visibility="invisible">-->
 
-                    <ImageView
-                        android:id="@+id/imageView13"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/btn_1" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageView13"-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="24dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/btn_1" />-->
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Explorer"
-                        android:textAlignment="center" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/textView20"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:text="Explorer"-->
+<!--                        android:textAlignment="center" />-->
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:id="@+id/cartPage"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.25"
                     android:orientation="vertical">
 
                     <ImageView
@@ -436,13 +563,14 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/profile"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.25"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView15"
+                        android:id="@+id/profileImage"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
@@ -459,14 +587,14 @@
             </LinearLayout>
         </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/qrcode"
-            app:backgroundTint="@color/purple_dark"
-            app:layout_anchor="@id/appbar"
-            app:maxImageSize="30dp"
-            app:tint="@color/white" />
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/qrcode"-->
+<!--            app:backgroundTint="@color/purple_dark"-->
+<!--            app:layout_anchor="@id/appbar"-->
+<!--            app:maxImageSize="30dp"-->
+<!--            app:tint="@color/white" />-->
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
